@@ -1,5 +1,10 @@
+@import "./base/reset";
+@import "./base/globals";
+@import "./base/mixins";
+@import "./utilities/variables";
+@import "./layout/sections";
 @import "~bootstrap/scss/bootstrap";
 
 body {
-  background-color: aquamarine;
+  background-color: #22272e;
 }

@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    font-size: 18px;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: $Catamaran;
+    
+  }
+  
+ul {
+    @include flex(row, center, space-evenly);
+}
+
+  a {
+    text-decoration: none;
+  }
+
+h1, h3, h6 {
+    align-self: flex-start;
+    font-size: 60px;
+    font-family: $Catamaran;
+    color: darkgray;
+}
+
+  
+  .text {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }

@@ -36,17 +36,7 @@ function App() {
   };
   return (
     <React.Fragment>
-      {
-        //<img src={`${process.env.PUBLIC_URL}/${data[0].img}`} alt="Sushi" />
-        
-        <FontAwesomeIcon icon={["fab", "apple"]} size="6x" rotation={90} />
-      }
-
       <h1>Welcome to our online store</h1>
-      <h3>
-        Lets go for a <FaBeer /> with <WiAlien /> when it's
-        <WiNightAltThunderstorm />
-      </h3>
       <form onSubmit={handleSubmit}>
         <input type="text" onChange={changeHandle} value={userInput} />
         <input type="submit" value="filter" />
