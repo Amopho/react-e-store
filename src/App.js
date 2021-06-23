@@ -37,6 +37,7 @@ function App() {
     <React.Fragment>
       {
         //<img src={`${process.env.PUBLIC_URL}/${data[0].img}`} alt="Sushi" />
+        
         <FontAwesomeIcon icon={["fab", "apple"]} size="6x" rotation={90} />
       }
 
