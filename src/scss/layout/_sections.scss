@@ -14,7 +14,7 @@
   
   body {
     font-family: $Catamaran;
-    
+    @include flex(column, center, space-evenly)
   }
   
 ul {
@@ -25,7 +25,14 @@ ul {
     text-decoration: none;
   }
 
-h1, h3, h6 {
+  h1 {
+    // align-self: flex-end;
+    font-size: 60px;
+    font-family: $Montserrat;
+    color: darkgray;
+  }
+
+  h3, h6 {
     align-self: flex-start;
     font-size: 60px;
     font-family: $Catamaran;
@@ -39,3 +46,7 @@ h1, h3, h6 {
     justify-content: space-evenly;
     flex-direction: column;
   }
+
+form {
+    @include flex(row, center, none);
+}
