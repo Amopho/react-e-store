@@ -103,5 +103,5 @@ Import icons into each component.
 ## Installing Bootstrap to handle cards
 
 ```
- $ npm install react-router-dom
+ $ npm install react-bootstrap bootstrap@5.0.1
 ```

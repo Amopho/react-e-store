@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import Data from "./data.json";
+// import Data from "./data.json";
+import Tshirts from "./tshirts.json";
 import ProductList from "./components/ProductList";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -11,7 +12,7 @@ import { FaBeer } from "react-icons/fa";
 import { WiAlien, WiNightAltThunderstorm } from "react-icons/wi";
 
 function App() {
-  const [data, setData] = useState(Data);
+  const [tshirts, setTshirts] = useState(Tshirts);
   const [userInput, setUserInput] = useState("");
   const [filteredData, setFilteredData] = useState([]);
 
@@ -23,7 +24,7 @@ function App() {
     const userText = userInput.toLocaleLowerCase().trim();
     const userTextLength = userText.length;
     // const searchText = userText ? userText : "";
-    let newArr = data.filter((item) => {
+    let newArr = tshirts.filter((item) => {
       const slicedProductName = item.productName.slice(0, userTextLength);
       return slicedProductName === userText;
     });
@@ -50,7 +51,7 @@ function App() {
         <input type="text" onChange={changeHandle} value={userInput} />
         <input type="submit" value="filter" />
       </form>
-      <ProductList data={userInput ? filteredData : data} />
+      <ProductList tshirts={userInput ? filteredData : tshirts} />
     </React.Fragment>
   );
 }

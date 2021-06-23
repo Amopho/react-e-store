@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ProductItem from "./ProductItem";
 
-const ProductList = ({ data }) => {
+const ProductList = ({ tshirts }) => {
   const [cart, setCart] = useState([]);
   const [totalBill, setTotalBill] = useState(0);
   const addToCart = (item) => {
@@ -9,7 +9,7 @@ const ProductList = ({ data }) => {
     setCart((prevState) => [...prevState, item]);
     console.log(cart);
   };
-  const items = data.map((item, i) => (
+  const items = tshirts.map((item, i) => (
     <ProductItem key={i} info={item} addToCart={addToCart} />
   ));
 
