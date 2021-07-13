@@ -2,7 +2,7 @@
 
 A ReactJS app with online shop' features.
 
-![Preview](./public/img/shopping-cart.png)
+![Preview](./public/img/e-store-glimpse.png)
 
 # Getting Started with Create React App
 
@@ -100,6 +100,7 @@ Import icons into each component.
  $ const element = <FontAwesomeIcon icon={faCoffee} />
  $ ReactDOM.render(element, document.body)
 ```
+
 ## Installing Bootstrap to handle cards
 
 ```
