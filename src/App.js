@@ -2,6 +2,7 @@ import React, { useState } from "react";
 // import Data from "./data.json";
 import Tshirts from "./tshirts.json";
 import ProductList from "./components/ProductList";
+import { Fragment } from "react";
 
 function App() {
   const [tshirts, setTshirts] = useState(Tshirts);
@@ -15,7 +16,7 @@ function App() {
   const lookUp = () => {
     const userText = userInput.toLocaleLowerCase().trim();
     const userTextLength = userText.length;
-    // const searchText = userText ? userText : "";
+    const searchText = userText ? userText : "";
     let newArr = tshirts.filter((item) => {
       const slicedProductName = item.productName.slice(0, userTextLength);
       return slicedProductName === userText;
@@ -27,14 +28,14 @@ function App() {
     lookUp();
   };
   return (
-    <React.Fragment>
+    <Fragment>
       <h1>Welcome to our online store</h1>
       <form onSubmit={handleSubmit}>
         <input type="text" onChange={changeHandle} value={userInput} />
         <input type="submit" value="filter" />
       </form>
       <ProductList tshirts={userInput ? filteredData : tshirts} />
-    </React.Fragment>
+    </Fragment>
   );
 }
 
